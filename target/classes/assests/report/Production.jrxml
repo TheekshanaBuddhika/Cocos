@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Production" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CocosAdapter"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#EEEFF0"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#CACED0">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#D8D8D8"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="tableDataset" uuid="f13e6d36-5148-4ecc-bbe3-3035def80980">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT i.Name , MONTHNAME(product.Date)AS MONTH,product.quantity FROM product
+INNER JOIN item i ON product.Item_id = i.Item_id
+GROUP BY i.Name, MONTHNAME(product.Date)
+ORDER BY MONTH ASC]]>
+	</queryString>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+	</field>
+	<field name="MONTH" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MONTH"/>
+		<property name="com.jaspersoft.studio.field.label" value="MONTH"/>
+	</field>
+	<field name="quantity" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="quantity"/>
+		<property name="com.jaspersoft.studio.field.label" value="quantity"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+	</field>
+	<title>
+		<band height="230" splitType="Stretch">
+			<image>
+				<reportElement x="270" y="0" width="285" height="85" uuid="a5309ed6-fc5d-4c9b-ad98-c64998585edf"/>
+				<imageExpression><![CDATA["E:/Intellij projects/Cocos/src/main/resources/assests/image/Rectangle 68.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="80" y="180" width="400" height="1" uuid="806ce5df-1219-4876-ae0c-ca7405b1f246">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="6.0"/>
+				</graphicElement>
+			</line>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="454" y="119" width="100" height="30" uuid="922f2b0d-dde5-46ff-adae-f7c65f254e07"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="454" y="149" width="100" height="30" uuid="881eb24c-8e27-4867-8662-4bd407681892"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="420" y="119" width="34" height="30" uuid="be808826-32a9-4e24-b6f5-2367a0be8ac1"/>
+				<text><![CDATA[Date :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="149" width="34" height="30" uuid="494b06bf-7e98-4612-891a-bdc18bd55441"/>
+				<text><![CDATA[Time :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="156" y="86" width="255" height="68" forecolor="#18027A" uuid="e20418f3-1d01-4125-aa6d-5dcc0b358053">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB Demi" size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Annual Production Report]]></text>
+			</staticText>
+			<line>
+				<reportElement x="165" y="143" width="230" height="1" uuid="478aeeeb-c84f-4b81-a7f4-e7bc05231e3b"/>
+			</line>
+			<staticText>
+				<reportElement x="179" y="150" width="205" height="15" forecolor="#0A177D" uuid="34272f8b-ba6a-49bf-8abc-b9cc26a00151"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dedu (PVT)LTD]]></text>
+			</staticText>
+			<image>
+				<reportElement x="2" y="0" width="450" height="230" uuid="54fc0e50-0db1-4dae-8800-5effc1bc8c7c"/>
+				<imageExpression><![CDATA["E:/Intellij projects/Cocos/src/main/resources/assests/image/sdsfadaeeewe.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20">
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="30" y="-10" width="155" height="30" forecolor="#000000" uuid="cb0a2172-fb9f-4bd6-b7bf-8f7231a44132">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bd7a67d3-64a0-440c-9c1a-f383e359615b"/>
+				</reportElement>
+				<box topPadding="6" leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="Berlin Sans FB" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="185" y="-10" width="185" height="30" forecolor="#000000" uuid="d5c1ff88-49b1-4c32-923f-372b3a808190">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0d603620-2ece-4e46-bda4-2f83c1fb887d"/>
+				</reportElement>
+				<box topPadding="6">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MONTH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="370" y="-10" width="185" height="30" forecolor="#000000" uuid="aee13274-344a-4991-9518-a632f36728f5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="70005cb5-d154-418b-9c3f-0991567cc710"/>
+				</reportElement>
+				<box topPadding="6">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Produced Quantity(KG)]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="30" y="0" width="155" height="30" uuid="c5ea60be-56d2-4d35-85fd-f245d8174164">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bd7a67d3-64a0-440c-9c1a-f383e359615b"/>
+				</reportElement>
+				<box topPadding="7" leftPadding="5">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="185" y="0" width="185" height="30" uuid="f36794c7-1cb9-4a9e-aec2-09478d45b73c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0d603620-2ece-4e46-bda4-2f83c1fb887d"/>
+				</reportElement>
+				<box topPadding="7">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MONTH}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="370" y="0" width="185" height="30" uuid="797d4caf-c913-4443-a21c-b58aeceaa295">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="70005cb5-d154-418b-9c3f-0991567cc710"/>
+				</reportElement>
+				<box topPadding="7">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="50">
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="-2" y="20" width="556" height="30" forecolor="#171582" backcolor="#76B3D6" uuid="58efb98a-4b21-4425-b8e8-25504f939483"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[----------The Real Thing----------]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+</jasperReport>

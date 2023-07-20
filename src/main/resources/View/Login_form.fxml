@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: white;" stylesheets="@../assests/StyleSheets/login.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="769.0" fitWidth="1368.0" layoutX="-2.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../assests/image/Login.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="usernametxt" alignment="CENTER" layoutX="534.0" layoutY="362.0" onKeyPressed="#userPressed" prefHeight="49.0" prefWidth="300.0" promptText="Username" styleClass="TextField" AnchorPane.bottomAnchor="358.0" AnchorPane.leftAnchor="534.0" AnchorPane.rightAnchor="533.7786865234375" AnchorPane.topAnchor="362.0">
+         <font>
+            <Font name="Berlin Sans FB" size="24.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></TextField>
+      <JFXButton fx:id="loginbtn" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="892.0" layoutY="325.0" onAction="#btnPressed" onMouseEntered="#logenter" onMouseExited="#logenter1" prefHeight="131.0" prefWidth="216.0" ripplerFill="WHITE" rotate="90.0" styleClass="login-button" textFill="WHITE" AnchorPane.bottomAnchor="313.0" AnchorPane.leftAnchor="892.0" AnchorPane.rightAnchor="259.7786865234375" AnchorPane.topAnchor="325.0">
+         <graphic>
+            <ImageView fx:id="logn" fitHeight="61.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+               <image>
+                  <Image url="@../assests/image/icons8-sign-in-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="-20.0" />
+         </padding></JFXButton>
+      <PasswordField fx:id="passtxt" alignment="CENTER" layoutX="533.0" layoutY="468.0" onKeyPressed="#passPressed" prefHeight="49.0" prefWidth="300.0" promptText="Password" styleClass="PasswordField" AnchorPane.bottomAnchor="252.0" AnchorPane.leftAnchor="533.0" AnchorPane.rightAnchor="534.7786865234375" AnchorPane.topAnchor="468.0">
+         <font>
+            <Font name="Berlin Sans FB" size="24.0" />
+         </font></PasswordField>
+      <JFXButton fx:id="regbtn" alignment="CENTER" buttonType="RAISED" layoutX="251.0" layoutY="298.0" onAction="#regPressed" prefHeight="74.0" prefWidth="138.0" ripplerFill="WHITE" rotate="-45.0" text="Register" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="24.0" />
+         </font></JFXButton>
+      <ImageView fx:id="useimg" fitHeight="42.0" fitWidth="49.0" layoutX="546.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/image/User.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="passimg" fitHeight="42.0" fitWidth="49.0" layoutX="545.0" layoutY="471.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/image/Secure.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="forgottxt" fill="WHITE" layoutX="590.0" layoutY="581.0" onMouseClicked="#forgotClicked" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text" text="forgot password?" AnchorPane.bottomAnchor="182.71875" AnchorPane.leftAnchor="590.0" AnchorPane.rightAnchor="595.6644287109375" AnchorPane.topAnchor="557.7041015625">
+         <font>
+            <Font size="26.0" />
+         </font></Text>
+      <Label fx:id="usetxt" layoutX="534.0" layoutY="335.0" styleClass="Label" textFill="WHITE" />
+      <Label fx:id="passwtxt" layoutX="533.0" layoutY="441.0" styleClass="Label" textFill="WHITE" />
+      <JFXButton fx:id="clsbtn" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="1280.0" layoutY="26.0" onMouseClicked="#clsClicked" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/icons8-macos-close-90.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="clsbtn1" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="1234.0" onMouseClicked="#clsClicked1">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/remove.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

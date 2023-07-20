@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="848.0" styleClass="BackgroundPane3" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.SettingFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#34495e" height="70.0" layoutY="124.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="570.0" AnchorPane.leftAnchor="0.0">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" radius="4.75" width="0.0" />
+         </effect>
+      </Rectangle>
+      <Label layoutX="338.0" layoutY="34.0" styleClass="Label" text="Settings" textFill="WHITE">
+         <font>
+            <Font size="56.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" />
+         </effect></Label>
+      <AnchorPane fx:id="settingPane" layoutX="7.0" layoutY="194.0" prefHeight="456.0" prefWidth="848.0" styleClass="BackgroundPane2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="194.0">
+         <children>
+            <ImageView fitHeight="406.0" fitWidth="346.0" layoutX="463.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="463.0" AnchorPane.rightAnchor="54.058837890625">
+               <image>
+                  <Image url="@../assests/image/dd.png" />
+               </image>
+            </ImageView>
+            <Circle fill="WHITE" layoutX="208.0" layoutY="128.0" radius="100.0" stroke="BLACK" strokeType="INSIDE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Circle>
+            <TextField fx:id="usertxt" layoutX="517.0" layoutY="108.0" onKeyPressed="#usPressed" onKeyTyped="#unmTyped" promptText="Username" styleClass="TextField" />
+            <PasswordField fx:id="pastxt" layoutX="518.0" layoutY="202.0" onKeyPressed="#pasPressed" onKeyTyped="#pasTyped" promptText="Password" styleClass="PasswordField" />
+            <PasswordField fx:id="conpastxt" layoutX="518.0" layoutY="290.0" onKeyTyped="#conpasTyped" promptText="Confirm Password" styleClass="PasswordField" />
+            <ImageView fitHeight="414.0" fitWidth="521.0" layoutX="39.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/dd.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="133.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/ffff.png" />
+               </image>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+            </ImageView>
+            <Label fx:id="usnmlbl" layoutX="131.0" layoutY="241.0" styleClass="Label" textFill="WHITE">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+            <Label layoutX="152.0" layoutY="318.0" styleClass="Label" text="Profile Name" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="517.0" layoutY="81.0" styleClass="Label" text="User Name" textFill="WHITE" />
+            <Label layoutX="518.0" layoutY="177.0" styleClass="Label" text="Password" textFill="WHITE" />
+            <Label layoutX="518.0" layoutY="267.0" styleClass="Label" text="Confirm Password" textFill="WHITE" />
+            <JFXButton fx:id="sbtn" buttonType="RAISED" layoutX="664.0" layoutY="368.0" onMouseClicked="#saveClicked" styleClass="bt" text="Save" />
+         </children></AnchorPane>
+      <JFXButton fx:id="clsbtn" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="727.0" layoutY="31.0" onMouseClicked="#clsbtnClck" styleClass="a" text="Button" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/icons8-macos-close-90.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <HBox layoutX="1.0" layoutY="124.0" prefHeight="75.0" AnchorPane.bottomAnchor="456.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="124.0">
+         <children>
+            <JFXButton fx:id="chnEmail1" onMouseClicked="#chnClicked1" prefHeight="75.0" prefWidth="427.0" styleClass="b" text="Permission" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="chnEmail" onMouseClicked="#chnClicked" prefHeight="75.0" prefWidth="427.0" styleClass="b" text="Change Email" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="prset" onMouseClicked="#prClicked" prefHeight="75.0" prefWidth="427.0" styleClass="b" text="Profile Settting">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+      <ImageView fitHeight="88.0" fitWidth="99.0" layoutX="632.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/image/settings.png" />
+         </image>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect>
+      </ImageView>
+   </children>
+   <stylesheets>
+      <URL value="@../assests/StyleSheets/login.css" />
+      <URL value="@../assests/StyleSheets/Dispaly.css" />
+   </stylesheets>
+</AnchorPane>

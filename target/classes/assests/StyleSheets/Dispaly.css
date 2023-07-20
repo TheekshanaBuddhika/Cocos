@@ -1,0 +1,137 @@
+
+.BackgroundPane2{
+    -fx-background-color: linear-gradient(to right bottom,#03045e, #03045e, #023e8a,#0077b6 );
+}
+
+.BackgroundPane3{
+    -fx-background-color: linear-gradient(to right bottom,#03045e, #0077b6,#bde0fe );
+}
+
+
+
+.Label{
+
+    -fx-font-family: "Berlin Sans FB";
+
+}
+
+.menu-bar{
+    -fx-background-color: #BD99F8;
+}
+.menu-bar:hover,.menu-bar:focused{
+    -fx-background-color: #ffd6ff;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.context-menu {
+    -fx-background-color: black;
+}
+
+
+.menu-item .label {
+    -fx-text-fill: gray;
+}
+
+
+.menu-item:focused, .menu-item:hover,.menu-item:focused {
+    -fx-text-fill: black;
+    -fx-background-color:white;
+    -fx-font-weight: bold;
+}
+
+.mbtn{
+    -fx-background-color: #BD99F8;
+}
+
+.mbtn:hover{
+    -fx-background-color: #ffd6ff;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.combo-box{
+    -fx-text-fill: black;
+    -fx-background-color:white;
+    -fx-font-weight: bold;
+}
+
+.combo-box:focused{
+    -fx-text-fill: white;
+    -fx-background-color: #6e6d6d;
+    -fx-font-weight: bold;
+}
+
+.combo-box:hover{
+    -fx-background-color: #023e8a;
+}
+
+.table-view{
+    -fx-background-radius: 10 10 10 10;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#0077b6 0%,#4EA8DE 100%);
+    -fx-background-radius: 10 10 0 0;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #bde0fe;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #a2d2ff;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #023e8a;
+
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #03045e;
+}
+
+.hdr{
+-fx-background-color: linear-gradient(#3a0ca3 0%,#560bad 100%);
+}
+
+.frntimg{
+    -fx-background-color: linear-gradient(#560bad 0%,#9d4edd 100%);
+    -fx-background-radius: 30;
+}
+
+.llbb{
+    -fx-background-color: linear-gradient(#560bad 0%,#9d4edd 100%);
+    -fx-text-fill: white;
+    -fx-font-family: "Berlin Sans FB";
+    -fx-font-weight: bold;
+    -fx-background-radius: 15 15 0 0;
+}
+
+.llbb:hover{
+    -fx-background-color: #03045e;
+    -fx-text-fill: white;
+    -fx-font-family: "Berlin Sans FB";
+    -fx-font-weight: bold;
+}

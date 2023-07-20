@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="panee1" prefHeight="652.0" prefWidth="1286.0" stylesheets="@../assests/StyleSheets/login.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.TransactionFormController">
+    <children>
+        <ImageView fitHeight="116.0" fitWidth="611.0" layoutX="655.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assests/image/dn.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="116.0" fitWidth="1252.0" layoutX="16.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assests/image/tp.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="440.0" fitWidth="610.0" layoutX="15.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assests/image/bck.png" />
+            </image>
+        </ImageView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b4d8" height="63.0" layoutX="31.0" layoutY="305.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="641.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+        <Label layoutX="488.0" layoutY="21.0" prefHeight="77.0" styleClass="Label" text="Transaction" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="56.0" />
+            </font>
+            <effect>
+                <DropShadow />
+            </effect>
+        </Label>
+        <Label layoutX="38.0" layoutY="155.0" prefHeight="30.0" prefWidth="120.0" styleClass="Label" text="Order date:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblOrderDate" layoutX="155.0" layoutY="155.0" prefHeight="30.0" styleClass="llll" textFill="#278d7f">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="39.0" layoutY="205.0" prefHeight="30.0" styleClass="Label" text="Supplier Name" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <JFXComboBox fx:id="cmbCustomerId" layoutX="38.0" layoutY="238.0" onAction="#cmbCustomerOnAction" prefHeight="39.0" prefWidth="135.0" styleClass="combo-box" stylesheets="@../assests/StyleSheets/Dispaly.css" />
+        <Label layoutX="332.0" layoutY="206.0" styleClass="Label" text="Supplier Id :" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblCustomerName" layoutX="331.0" layoutY="239.0" prefHeight="26.0" styleClass="llll">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="39.0" layoutY="309.0" styleClass="Label" text="Item" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <JFXComboBox fx:id="cmbItemCode" layoutX="103.0" layoutY="314.0" onAction="#cmbItemOnAction" prefHeight="39.0" prefWidth="216.0" stylesheets="@../assests/StyleSheets/Dispaly.css" />
+        <Label layoutX="465.0" layoutY="309.0" styleClass="Label" text="Item Code" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblDescription" layoutX="465.0" layoutY="340.0" prefHeight="27.0" styleClass="llll" textFill="#278d7f">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="34.0" layoutY="394.0" styleClass="Label" text="Unit Price:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblUnitPrice" layoutX="35.0" layoutY="430.0" prefHeight="26.0" styleClass="llll" textFill="#278d7f">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="243.0" layoutY="394.0" styleClass="Label" text="Stock" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblQtyOnHand" layoutX="255.0" layoutY="427.0" prefHeight="26.0" styleClass="llll" textFill="#278d7f">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="445.0" layoutY="392.0" styleClass="Label" text="Quantity" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtQty" alignment="CENTER" layoutX="446.0" layoutY="424.0" onKeyTyped="#txtQtyOnAction" prefHeight="39.0" prefWidth="97.0" styleClass="TextField" />
+        <TableView fx:id="tblOrderCart" layoutX="655.0" layoutY="149.0" prefHeight="371.0" prefWidth="611.0" stylesheets="@../assests/StyleSheets/Dispaly.css" AnchorPane.rightAnchor="20.0">
+            <columns>
+                <TableColumn fx:id="colItemCode" prefWidth="75.0" style="-fx-alignment: center;" text="Code" />
+                <TableColumn fx:id="colDescription" prefWidth="135.0" style="-fx-alignment: center;" text="Name" />
+                <TableColumn fx:id="colQty" prefWidth="78.0" style="-fx-alignment: center;" text="Qty" />
+                <TableColumn fx:id="colUnitPrice" prefWidth="113.0" style="-fx-alignment: center;" text="Unit Price" />
+                <TableColumn fx:id="colTotal" prefWidth="94.0" style="-fx-alignment: center;" text="Total" />
+                <TableColumn fx:id="colAction" prefWidth="115.0" style="-fx-alignment: center;" text="Clear" />
+            </columns>
+            <effect>
+                <DropShadow />
+            </effect>
+        </TableView>
+        <JFXButton fx:id="cartbtn" buttonType="RAISED" layoutX="395.0" layoutY="513.0" onAction="#btnAddToCartOnAction" prefHeight="39.0" prefWidth="157.0" styleClass="bt" text="Add to cart" textFill="WHITE">
+            <graphic>
+                <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assests/image/place_order.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="conbtn" buttonType="RAISED" layoutX="1140.0" layoutY="540.0" onAction="#btnPlaceOrderOnAction" prefHeight="34.0" prefWidth="120.0" styleClass="b" text="Confirm" textFill="WHITE" AnchorPane.bottomAnchor="71.0" AnchorPane.rightAnchor="26.0">
+            <graphic>
+                <ImageView fitHeight="28.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assests/image/make_order.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="200.0" layoutY="216.0" onAction="#btnNewCustomerOnAction" prefHeight="39.0" prefWidth="46.0" styleClass="btnn" text="NEW" textFill="WHITE">
+            <graphic>
+                <ImageView fitHeight="27.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assests/image/icons8-add-administrator-50.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <Label fx:id="lblNetTotal" layoutX="772.0" layoutY="548.0" prefHeight="32.0" styleClass="llll" textFill="#b51313" AnchorPane.bottomAnchor="72.0">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+        <Label layoutX="670.0" layoutY="550.0" prefHeight="30.0" styleClass="Label" text="Net Total:" textFill="WHITE" AnchorPane.bottomAnchor="72.0">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Separator layoutX="17.0" layoutY="123.0" prefHeight="6.0" prefWidth="1252.0">
+            <effect>
+                <DropShadow />
+            </effect>
+        </Separator>
+        <Separator layoutX="641.0" layoutY="144.0" orientation="VERTICAL" prefHeight="501.0" prefWidth="0.0">
+            <effect>
+                <DropShadow />
+            </effect>
+        </Separator>
+        <JFXButton fx:id="clrbtn" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="32.0" layoutY="514.0" onAction="#clrOnAction" styleClass="bt">
+            <graphic>
+                <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assests/image/icons8-remove-90.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+        <Separator layoutX="17.0" layoutY="583.0" prefHeight="6.0" prefWidth="592.0">
+            <effect>
+                <DropShadow />
+            </effect>
+        </Separator>
+        <JFXButton fx:id="stkbtn" contentDisplay="TEXT_ONLY" layoutX="105.0" layoutY="602.0" onAction="#stkOnAction" prefHeight="50.0" prefWidth="135.0" styleClass="btnn" text="Stock" textFill="WHITE" AnchorPane.bottomAnchor="0.0">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="rtlbtn" contentDisplay="TEXT_ONLY" layoutX="241.0" layoutY="602.0" onAction="#rtlOnAction" prefHeight="50.0" prefWidth="135.0" styleClass="btnn" text="Retail" textFill="WHITE" AnchorPane.bottomAnchor="0.0">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="trcbtn" contentDisplay="TEXT_ONLY" layoutX="376.0" layoutY="602.0" prefHeight="50.0" prefWidth="135.0" text="Transaction" textFill="WHITE" AnchorPane.bottomAnchor="0.0">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+         <styleClass>
+            <String fx:value="btnnn" />
+            <String fx:value="btnn" />
+         </styleClass>
+        </JFXButton>
+        <Separator layoutX="22.0" layoutY="293.0" prefHeight="0.0" prefWidth="592.0" />
+        <Label layoutX="855.0" layoutY="574.0" prefHeight="30.0" styleClass="Label" text="Payment" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <TextField fx:id="cashtxt" alignment="CENTER" layoutX="948.0" layoutY="564.0" onKeyTyped="#cashPressed" prefHeight="53.0" prefWidth="157.0" styleClass="t">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font></TextField>
+        <JFXButton fx:id="clbtn" buttonType="RAISED" layoutX="1140.0" layoutY="597.0" onAction="#clOnAction" prefHeight="34.0" prefWidth="120.0" styleClass="b" text="Cancel" textFill="WHITE">
+            <graphic>
+                <ImageView fitHeight="28.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assests/image/icons8-remove-90.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <Label fx:id="lblchn" layoutX="770.0" layoutY="596.0" prefHeight="32.0" styleClass="llll" textFill="#b51313">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+        <Label layoutX="691.0" layoutY="598.0" prefHeight="30.0" styleClass="Label" text="Change" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <JFXButton fx:id="rldbtn" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="543.0" layoutY="151.0" onMouseClicked="#reloadClicked" styleClass="a">
+            <graphic>
+                <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assests/image/icons8-reload-60.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+        <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+      <JFXButton fx:id="itmaddbtn" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="338.0" layoutY="315.0" onAction="#newitmOnAction" prefHeight="39.0" prefWidth="46.0" styleClass="btnn" text="NEW" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/buskt.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="1027.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/image/smartphone.png" />
+         </image>
+         <effect>
+            <Glow level="0.4" />
+         </effect></ImageView>
+    </children>
+</AnchorPane>

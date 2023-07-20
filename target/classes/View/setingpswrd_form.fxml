@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="settin2" prefHeight="456.0" prefWidth="848.0" styleClass="BackgroundPane3" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.SetingpswrdFormController">
+   <children>
+      <AnchorPane layoutX="9.0" layoutY="14.0" prefHeight="456.0" prefWidth="848.0" styleClass="BackgroundPane2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Circle fill="WHITE" layoutX="209.0" layoutY="128.0" radius="100.0" stroke="BLACK" strokeType="INSIDE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Circle>
+            <ImageView fitHeight="406.0" fitWidth="346.0" layoutX="463.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="463.0" AnchorPane.rightAnchor="54.058837890625">
+               <image>
+                  <Image url="@../assests/image/dd.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="usertxt" layoutX="517.0" layoutY="108.0" onKeyPressed="#usPressed" onKeyTyped="#unmTyped" promptText="Username" styleClass="TextField" />
+            <PasswordField fx:id="pastxt" layoutX="518.0" layoutY="202.0" onKeyPressed="#pasPressed" onKeyTyped="#pasTyped" promptText="Password" styleClass="PasswordField" />
+            <PasswordField fx:id="conpastxt" layoutX="518.0" layoutY="290.0" onKeyTyped="#conpasTyped" promptText="Confirm Password" styleClass="PasswordField" />
+            <ImageView fitHeight="414.0" fitWidth="521.0" layoutX="39.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/dd.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="133.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/ffff.png" />
+               </image>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+            </ImageView>
+            <Label fx:id="usnmlbl" layoutX="131.0" layoutY="241.0" styleClass="Label" textFill="WHITE">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+            <Label layoutX="152.0" layoutY="318.0" styleClass="Label" text="Profile Name" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="517.0" layoutY="81.0" styleClass="Label" text="User Name" textFill="WHITE" />
+            <Label layoutX="518.0" layoutY="177.0" styleClass="Label" text="Password" textFill="WHITE" />
+            <Label layoutX="518.0" layoutY="267.0" styleClass="Label" text="Confirm Password" textFill="WHITE" />
+            <JFXButton fx:id="sbtn" buttonType="RAISED" layoutX="664.0" layoutY="368.0" onMouseClicked="#saveClicked" styleClass="bt" text="Save" />
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../assests/StyleSheets/login.css" />
+      <URL value="@../assests/StyleSheets/Dispaly.css" />
+   </stylesheets>
+</AnchorPane>

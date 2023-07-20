@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.net.URL?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="756.0" prefWidth="891.0" styleClass="BackgroundPane2" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.EmployeeFormController" fx:id="xxx">
+   <children>
+      <ImageView fitHeight="396.0" fitWidth="791.0" layoutX="54.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/image/cxcxc.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="346.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Label" text="Employee Info">
+         <font>
+            <Font size="36.0" />
+         </font></Text>
+      <TextField fx:id="empidtxt" layoutX="63.0" layoutY="390.0" onKeyTyped="#empidTyped" promptText="emp_id" styleClass="TextField" />
+      <TextField fx:id="empltxt" layoutX="333.0" layoutY="489.0" promptText="last name" styleClass="TextField" />
+      <TextField fx:id="empaddtxt" layoutX="603.0" layoutY="489.0" promptText="address" styleClass="PasswordField" />
+      <TextField fx:id="empftxt" layoutX="63.0" layoutY="489.0" promptText="first anme" styleClass="PasswordField" />
+      <TextField fx:id="empconttxt" layoutX="64.0" layoutY="590.0" onKeyTyped="#conTyped" promptText="Contact No" styleClass="TextField" />
+      <JFXComboBox fx:id="cmpPos" layoutX="331.0" layoutY="390.0" onAction="#posPressed" prefHeight="39.0" prefWidth="224.0" styleClass="combo-box">
+         <effect>
+            <DropShadow />
+         </effect></JFXComboBox>
+      <TextField fx:id="emppostxt" layoutX="603.0" layoutY="390.0" promptText="Position" styleClass="TextField" />
+      <JFXButton fx:id="saveBtn" buttonType="RAISED" layoutX="732.0" layoutY="684.0" onAction="#savePressed" prefHeight="39.0" prefWidth="98.0" styleClass="bt" text="Save" textAlignment="CENTER" textFill="WHITE" />
+      <JFXButton fx:id="clearBtn" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="614.0" layoutY="685.0" onAction="#clearPressed" styleClass="bt" text="Save" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/icons8-remove-90.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <DatePicker fx:id="dobpick" layoutX="334.0" layoutY="589.0" prefHeight="39.0" prefWidth="224.0" promptText="Birth Day" styleClass="TextField" />
+      <DatePicker fx:id="jdaypick" layoutX="603.0" layoutY="589.0" prefHeight="39.0" prefWidth="224.0" promptText="Joined Date" styleClass="TextField" />
+      <Separator layoutX="259.0" layoutY="80.0" prefHeight="12.0" prefWidth="388.0" />
+      <Label layoutX="63.0" layoutY="363.0" styleClass="Label" text="Employee Id" textFill="WHITE" />
+      <Label layoutX="63.0" layoutY="467.0" styleClass="Label" text="First Name" textFill="WHITE" />
+      <Label layoutX="333.0" layoutY="467.0" styleClass="Label" text="Last Name" textFill="WHITE" />
+      <Label layoutX="332.0" layoutY="368.0" styleClass="Label" text="Position" textFill="WHITE" />
+      <Label layoutX="603.0" layoutY="465.0" styleClass="Label" text="Address" textFill="WHITE" />
+      <Label layoutX="63.0" layoutY="566.0" styleClass="Label" text="Contact No" textFill="WHITE" />
+      <Label layoutX="603.0" layoutY="568.0" styleClass="Label" text="Joined Date" textFill="WHITE" />
+      <Label layoutX="333.0" layoutY="568.0" styleClass="Label" text="Date of Birth" textFill="WHITE" />
+      <Label layoutX="603.0" layoutY="369.0" styleClass="Label" text="Position Id" textFill="WHITE" />
+      <ImageView fitHeight="109.0" fitWidth="108.0" layoutX="722.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/image/division.png" />
+         </image>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect>
+      </ImageView>
+      <Label fx:id="newemplbl" layoutX="66.0" layoutY="321.0" styleClass="Label" text="Next Employee Id:" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="empnxtlbl" layoutX="195.0" layoutY="321.0" styleClass="Label" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmpGender" layoutX="66.0" layoutY="689.0" onAction="#genPressed" prefHeight="39.0" prefWidth="169.0" styleClass="combo-box">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect></JFXComboBox>
+      <JFXButton fx:id="brbtn" alignment="CENTER" buttonType="RAISED" layoutX="603.0" layoutY="272.0" onAction="#btOnAction" prefHeight="42.0" prefWidth="122.0" style="-fx-background-radius: 5;" styleClass="b" text="Browse" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/new.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="65.0" layoutY="666.0" styleClass="Label" text="Gender" textFill="WHITE" />
+      <HBox layoutX="342.0" layoutY="104.0" prefHeight="285.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-width: 3;" AnchorPane.bottomAnchor="436.0" AnchorPane.leftAnchor="342.0" AnchorPane.rightAnchor="333.0" AnchorPane.topAnchor="104.0">
+         <children>
+            <ImageView fx:id="imgView" fitHeight="285.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
+               <image>
+                  <Image url="@../assests/image/manager.png" />
+               </image>
+               <effect>
+                  <Glow />
+               </effect>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@../assests/StyleSheets/login.css" />
+      <URL value="@../assests/StyleSheets/Dispaly.css" />
+   </stylesheets>
+</AnchorPane>

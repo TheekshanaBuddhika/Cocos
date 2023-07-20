@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1286.0" stylesheets="@../assests/StyleSheets/Dispaly.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.MainDisplayFormControlller">
+   <children>
+      <Separator layoutX="91.0" layoutY="263.0" prefHeight="0.0" prefWidth="1122.0" style="-fx-background-color: white;" AnchorPane.topAnchor="343.0" />
+      <Circle layoutX="1189.0" layoutY="552.0" radius="90.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="frntimg">
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" />
+         </effect>
+         <fill>
+            <LinearGradient endX="1.0" endY="0.5853658536585367" startX="0.4682926829268293" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6123200058937073" green="0.30959999561309814" blue="0.8600000143051147" opacity="0.8138686418533325" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.3272950053215027" green="0.04690000042319298" blue="0.6700000166893005" opacity="0.6934306621551514" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <Circle layoutX="1040.0" layoutY="506.0" radius="136.0" stroke="TRANSPARENT" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" />
+         </effect>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2502500116825104" green="0.0949999988079071" blue="0.5" opacity="0.17883211374282837" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6123200058937073" green="0.30959999561309814" blue="0.8600000143051147" opacity="0.9124087691307068" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <Circle fill="#6930c3" layoutX="1149.0" layoutY="514.0" radius="125.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="dll">
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" />
+         </effect>
+      </Circle>
+      <ImageView fx:id="imgview" fitHeight="272.0" fitWidth="236.0" layoutX="1032.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/image/img1.png" />
+         </image>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" />
+         </effect>
+      </ImageView>
+      <Circle layoutX="108.0" layoutY="549.0" radius="90.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="frntimg">
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" />
+         </effect>
+         <fill>
+            <LinearGradient endX="1.0" endY="0.5853658536585367" startX="0.4682926829268293" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.32549020648002625" green="0.0470588244497776" blue="0.6705882549285889" opacity="0.8100000023841858" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5706018805503845" green="0.06834795325994492" blue="0.6710526347160339" opacity="0.6899999976158142" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <Circle layoutX="279.0" layoutY="504.0" radius="136.0" stroke="TRANSPARENT" strokeType="INSIDE">
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" />
+         </effect>
+         <fill>
+            <LinearGradient startX="1.0" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6117647290229797" green="0.30980393290519714" blue="0.8588235378265381" opacity="0.18000000715255737" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.250980406999588" green="0.0941176488995552" blue="0.501960813999176" opacity="0.9100000262260437" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <Circle fill="#6930c3" layoutX="168.0" layoutY="511.0" radius="125.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="dll">
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" />
+         </effect>
+      </Circle>
+      <ImageView fx:id="imgview1" fitHeight="272.0" fitWidth="236.0" layoutX="51.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/image/img1.png" />
+         </image>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" />
+         </effect>
+      </ImageView>
+      <Pane fx:id="dspane" layoutX="86.0" layoutY="81.0" onMouseEntered="#en1" prefHeight="200.0" prefWidth="326.0" styleClass="frntimg">
+         <children>
+            <Label fx:id="dsimg1" layoutX="180.0" layoutY="50.0" styleClass="Label" text="Daily Sales" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="Dslbl" layoutX="183.0" layoutY="110.0" styleClass="Label" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="dsimg2" fitHeight="150.0" fitWidth="200.0" layoutX="26.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/icons8-total-sales-96.png" />
+               </image>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane fx:id="dtpane" layoutX="480.0" layoutY="82.0" onMouseEntered="#en2" prefHeight="200.0" prefWidth="343.0" styleClass="frntimg">
+         <children>
+            <Label fx:id="dtimg1" layoutX="185.0" layoutY="45.0" styleClass="Label" text="Daily Total" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <Label fx:id="dtlbl" layoutX="194.0" layoutY="113.0" styleClass="Label" textFill="#dddddd">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="dtimg2" fitHeight="150.0" fitWidth="200.0" layoutX="26.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/icons8-us-dollar-circled-96.png" />
+               </image>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane fx:id="mtpane" layoutX="890.0" layoutY="82.0" onMouseEntered="#en3" prefHeight="200.0" prefWidth="343.0" styleClass="frntimg" stylesheets="@../assests/StyleSheets/Dispaly.css">
+         <children>
+            <Label fx:id="mtimg" layoutX="155.0" layoutY="46.0" styleClass="Label" text="Monthly Total" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="mtlbl" layoutX="165.0" layoutY="110.0" prefHeight="31.0" styleClass="Label" textFill="#f8f8f8">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="mtimg2" fitHeight="135.0" fitWidth="130.0" layoutX="13.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/icons8-pay-date-96.png" />
+               </image>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane fx:id="mppane" layoutX="456.0" layoutY="414.0" onMouseEntered="#en4" prefHeight="200.0" prefWidth="419.0" styleClass="frntimg" stylesheets="@../assests/StyleSheets/Dispaly.css">
+         <children>
+            <Label fx:id="mpig" layoutX="155.0" layoutY="46.0" styleClass="Label" text="Monthly Production" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="mplbl" layoutX="165.0" layoutY="110.0" prefHeight="31.0" styleClass="Label" textFill="#f8f8f8">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="mping2" fitHeight="135.0" fitWidth="130.0" layoutX="13.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/production.png" />
+               </image>
+               <effect>
+                  <Glow />
+               </effect>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

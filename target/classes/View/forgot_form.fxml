@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root2" prefHeight="600.0" prefWidth="1076.0" style="-fx-background-color: #80ffdb;" stylesheets="@../assests/StyleSheets/login.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.ForgotFormController">
+   <children>
+      <ImageView fitHeight="623.0" fitWidth="1076.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/image/otpPage.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="otplbl" fill="WHITE" layoutX="227.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text" text="OTP code will be send to the Administratotors Email address">
+         <font>
+            <Font size="26.0" />
+         </font></Text>
+      <TextField fx:id="firstbtn" alignment="CENTER" layoutX="316.0" layoutY="334.0" onKeyTyped="#firstTyped" prefHeight="79.0" prefWidth="80.0" styleClass="TextField" visible="false">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
+      <TextField fx:id="secbtn" alignment="CENTER" layoutX="414.0" layoutY="334.0" onKeyTyped="#secTyped" prefHeight="79.0" prefWidth="80.0" styleClass="TextField" visible="false">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
+      <TextField fx:id="thirdbtn" alignment="CENTER" layoutX="516.0" layoutY="334.0" onKeyTyped="#thirdTyped" prefHeight="79.0" prefWidth="80.0" styleClass="TextField" visible="false">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
+      <TextField fx:id="fourthbtn" alignment="CENTER" layoutX="617.0" layoutY="334.0" onKeyTyped="#fourthTyped" prefHeight="79.0" prefWidth="80.0" styleClass="TextField" visible="false">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
+      <TextField fx:id="fifthbtn" alignment="CENTER" layoutX="715.0" layoutY="334.0" onKeyTyped="#fifithTyped" prefHeight="79.0" prefWidth="80.0" styleClass="TextField" visible="false">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
+      <Text fx:id="resendlbl" layoutX="581.0" layoutY="550.0" onMouseClicked="#resendClicked" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text" text="Resend" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font></Text>
+      <JFXButton fx:id="verifybtn" buttonType="RAISED" layoutX="473.0" layoutY="454.0" onAction="#verifyPressed" prefHeight="20.0" prefWidth="147.0" style="-fx-background-color: rgba(94, 96, 206, 1); -fx-background-radius: 40;" text="Verify" visible="false">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <Text fx:id="ddlbl" fill="WHITE" layoutX="394.0" layoutY="551.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text" text="Didn't get a otp?" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="snd" buttonType="RAISED" layoutX="407.0" layoutY="350.0" onAction="#sndPressed" prefHeight="87.0" prefWidth="219.0" style="-fx-background-color: rgba(94, 96, 206, 1); -fx-background-radius: 40;" text="Send OTP" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

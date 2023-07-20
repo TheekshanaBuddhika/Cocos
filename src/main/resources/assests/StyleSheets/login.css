@@ -1,0 +1,146 @@
+.login-button{
+
+    -fx-shape:"M150 0 L75 200 L225 200 Z"
+}
+
+.login-button:hover{
+    -fx-background-color: #003566;
+    -fx-border-color: White;
+    -fx-border-width: 4;
+}
+.TextField{
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(three-pass-box,rgba(0, 0, 0, 0.25), 4, 2, 1, 2);
+    -fx-border-bottom-color: rgba(0, 255, 0, 0.5);
+    -fx-border-style:none;
+}
+
+.TextField:focused {
+    -fx-border-style:none;
+    -fx-border-color: transparent transparent Blue transparent;
+    -fx-border-width: 4;
+}
+
+.PasswordField{
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(three-pass-box,rgba(0, 0, 0, 0.25), 4, 2, 1, 2);
+    -fx-border-bottom-color: rgba(0, 255, 0, 0.5);
+    -fx-border-style:none;
+}
+
+.PasswordField:focused {
+    -fx-border-style:none;
+    -fx-border-color: transparent transparent Blue transparent;
+    -fx-border-width: 4;
+
+}
+
+.Text{
+    -fx-font-family: "Berlin Sans FB";
+   -fx-alignment: Center;
+}
+
+.Label{
+    -fx-font-family: "Berlin Sans FB";
+
+}
+
+.btnn{
+    -fx-text-fill: black;
+    -fx-background-color:#00b4d8;
+}
+
+.btnn:hover{
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: white;
+    -fx-background-color: #003566;
+    -fx-border-color: transparent transparent White transparent;
+    -fx-border-width: 4;
+}
+
+.btnnn{
+
+    -fx-text-fill: black;
+    -fx-background-color: #00b4d8;
+    -fx-border-color: transparent transparent White transparent;
+    -fx-border-width: 4;
+}
+
+.llll{
+    -fx-text-fill: black;
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 18px;
+}
+
+.bt{
+    -fx-text-fill: white;
+    -fx-background-color:#00b4d8;
+}
+
+.bt:hover{
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to right bottom,#03045e, #4361ee);
+    -fx-border-color: transparent transparent White transparent;
+    -fx-border-width: 4;
+    -fx-background-size: 120 180;
+}
+
+.b{
+    -fx-text-fill: white;
+    -fx-background-color: #34495e;
+}
+
+.b:hover{
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: white;
+    -fx-background-color: #003566;
+    -fx-border-color: transparent transparent White transparent;
+    -fx-border-width: 4;
+}
+
+.t{
+    -fx-border-width: 0.5;
+    -fx-border-color: black;
+    -fx-text-fill: black;
+    -fx-background-color: White;
+
+}
+
+.t:hover{
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-background-color: black;
+    -fx-border-color: transparent transparent White transparent;
+    -fx-border-width: 4;
+}
+
+.a:hover,.a:pressed{
+    -fx-background-color: #003566;
+    -fx-background-radius: 180 180 180 180;
+}
+
+.Line-chart-x {
+    -fx-border-color: Red transparent;
+    -fx-border-width: 3;
+}
+
+.Line-chart-x:hover{
+    -fx-border-color: Blue transparent;
+}
+
+.bbb{
+    -fx-font-family: "Berlin Sans FB";
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-color:#8900f2;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-background-size: 100%;
+}
+
+.bbb:hover,.bbb:pressed{
+    -fx-background-color: linear-gradient(to right bottom,#b100e8, #560bad);
+   -fx-background-size: 200%;
+}
+

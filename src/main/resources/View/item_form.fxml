@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="650.0" prefWidth="1268.0" stylesheets="@../assests/StyleSheets/login.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.ItemFormController">
+    <children>
+      <ImageView fitHeight="476.0" fitWidth="554.0" layoutX="34.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/image/erer.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="123.0" fitWidth="1219.0" layoutX="34.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/image/tp.png" />
+         </image>
+      </ImageView>
+        <Label layoutX="459.0" layoutY="46.0" styleClass="Label" text="Inventory Manage" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="40.0" />
+            </font>
+         <effect>
+            <DropShadow />
+         </effect>
+        </Label>
+        <TextField fx:id="txtCode" layoutX="58.0" layoutY="228.0" onAction="#codeSearchOnAction" onKeyTyped="#codePressed" prefHeight="39.0" prefWidth="130.0" styleClass="TextField" />
+        <Label layoutX="58.0" layoutY="197.0" styleClass="Label" text="Item Code" textFill="WHITE" />
+        <Label layoutX="286.0" layoutY="326.0" styleClass="Label" text="Description" textFill="WHITE" />
+        <TextField fx:id="txtDescription" layoutX="286.0" layoutY="353.0" prefHeight="39.0" prefWidth="200.0" styleClass="TextField" />
+        <Label layoutX="57.0" layoutY="451.0" styleClass="Label" text="Stock Price" textFill="WHITE" />
+        <TextField fx:id="txtUnitPrice" layoutX="56.0" layoutY="478.0" onKeyTyped="#prcTyped" prefHeight="39.0" prefWidth="130.0" styleClass="TextField" />
+        <Label layoutX="58.0" layoutY="326.0" styleClass="Label" text="Quantity" textFill="WHITE" />
+        <TextField fx:id="txtQtyOnHand" layoutX="58.0" layoutY="354.0" onKeyTyped="#qtyTyped" prefHeight="39.0" prefWidth="130.0" styleClass="TextField" />
+        <JFXButton fx:id="itmsvbtn" alignment="CENTER" buttonType="RAISED" layoutX="362.0" layoutY="560.0" onAction="#btnSaveOnAction" prefHeight="39.0" prefWidth="130.0" styleClass="bt" text="Save" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+        </JFXButton>
+        <TableView fx:id="itemtbl" layoutX="535.0" layoutY="184.0" onMouseClicked="#rowClicked" prefHeight="426.0" prefWidth="719.0" stylesheets="@../assests/StyleSheets/Dispaly.css">
+            <columns>
+                <TableColumn fx:id="colCode" prefWidth="102.0" style="-fx-alignment: center;" text="Code" />
+                <TableColumn fx:id="colDescription" prefWidth="164.0" style="-fx-alignment: center;" text="Name" />
+                <TableColumn fx:id="colQty" prefWidth="102.0" style="-fx-alignment: center;" text="Qty" />
+                <TableColumn fx:id="colQtyOnHand" prefWidth="90.0" style="-fx-alignment: center;" text="Unit" />
+            <TableColumn fx:id="colRet" prefWidth="90.0" style="-fx-alignment: center;" text="Retail" />
+            <TableColumn fx:id="colBase" prefWidth="90.0" style="-fx-alignment: center;" text="Base" />
+                <TableColumn fx:id="colAction" style="-fx-alignment: center;" text="Delete" />
+            </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+        </TableView>
+      <Separator layoutX="45.0" layoutY="124.0" prefHeight="1.0" prefWidth="1197.0" />
+      <Separator layoutX="521.0" layoutY="140.0" orientation="VERTICAL" prefHeight="494.0" prefWidth="0.0" />
+      <JFXButton fx:id="reloadbtn" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="538.0" layoutY="138.0" onMouseClicked="#reloadClicked" prefWidth="25.0" styleClass="a">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/icons8-reload-60.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="clearBtn" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="56.0" layoutY="558.0" onAction="#clearPressed" styleClass="bt" text="Save" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/icons8-remove-90.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="1113.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/image/list.png" />
+         </image>
+         <effect>
+            <Glow level="0.4" />
+         </effect>
+      </ImageView>
+      <JFXComboBox fx:id="cmbtype" layoutX="285.0" layoutY="228.0" onAction="#typeOnAction" prefHeight="39.0" prefWidth="200.0" stylesheets="@../assests/StyleSheets/Dispaly.css" />
+      <Label layoutX="285.0" layoutY="197.0" styleClass="Label" text="Item Type :" textFill="WHITE" />
+      <Label layoutX="62.0" layoutY="155.0" styleClass="Label" text="Next Item id:" textFill="WHITE" />
+      <Label fx:id="itmgrtlbl" layoutX="166.0" layoutY="156.0" prefHeight="21.0" styleClass="Label" textFill="WHITE" />
+      <TextField fx:id="txtUnitPrice2" layoutX="208.0" layoutY="478.0" onKeyTyped="#prc2Typed" prefHeight="39.0" prefWidth="130.0" styleClass="TextField" stylesheets="@../assests/StyleSheets/Dispaly.css" />
+      <Label layoutX="207.0" layoutY="453.0" styleClass="Label" text="Retail Price" textFill="WHITE" />
+      <TextField fx:id="txtUnitPrice3" layoutX="358.0" layoutY="478.0" onKeyTyped="#prc3Typed" prefHeight="39.0" prefWidth="130.0" styleClass="TextField" stylesheets="@../assests/StyleSheets/Dispaly.css" />
+      <Label layoutX="357.0" layoutY="453.0" styleClass="Label" text="Base Price" textFill="WHITE" />
+      <Label fx:id="typelbl" layoutX="376.0" layoutY="197.0" prefHeight="21.0" styleClass="Label" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="737.0" prefWidth="930.0" styleClass="BackgroundPane2" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.ChartFormController">
+   <stylesheets>
+      <URL value="@../assests/StyleSheets/login.css" />
+      <URL value="@../assests/StyleSheets/Dispaly.css" />
+   </stylesheets>
+   <children>
+      <Separator layoutX="101.0" layoutY="139.0" prefHeight="1.0" prefWidth="733.0">
+         <effect>
+            <Glow />
+         </effect>
+      </Separator>
+      <Label layoutX="261.0" layoutY="33.0" text="Progress Chart" textFill="#f2f2f2">
+         <font>
+            <Font size="64.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" />
+         </effect>
+      </Label>
+      <LineChart fx:id="linechrt" layoutX="70.0" layoutY="175.0" prefHeight="518.0" prefWidth="796.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" styleClass="Line-chart-x" tickLabelFill="WHITE">
+               <tickLabelFont>
+                  <Font size="10.0" />
+               </tickLabelFont>
+            </CategoryAxis>
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" tickLabelFill="WHITE" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>

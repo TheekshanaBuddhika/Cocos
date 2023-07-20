@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #726FD1;" stylesheets="@../assests/StyleSheets/login.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.RegistrationFormController">
+   <children>
+      <ImageView fitHeight="783.0" fitWidth="1365.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.562255859375" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../assests/image/register.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7b64e338" height="165.0" layoutX="621.0" layoutY="183.0" stroke="WHITE" strokeType="INSIDE" width="184.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <TextField fx:id="emptxt" layoutX="491.0" layoutY="373.0" onKeyPressed="#empPressed" prefHeight="40.0" prefWidth="200.0" promptText="Employee Id">
+         <styleClass>
+            <String fx:value="TextField" />
+            <String fx:value="Text" />
+         </styleClass>
+      </TextField>
+      <TextField fx:id="postxt" editable="false" layoutX="746.0" layoutY="374.0" prefHeight="40.0" prefWidth="200.0" promptText="Position">
+         <styleClass>
+            <String fx:value="TextField" />
+            <String fx:value="Text" />
+         </styleClass></TextField>
+      <PasswordField fx:id="pastxt" disable="true" layoutX="485.0" layoutY="553.0" onKeyPressed="#pasPressed" onKeyTyped="#pasTyped" prefHeight="40.0" prefWidth="200.0" promptText="Password">
+         <styleClass>
+            <String fx:value="PasswordField" />
+            <String fx:value="Text" />
+         </styleClass></PasswordField>
+      <PasswordField fx:id="conpastxt" disable="true" layoutX="719.0" layoutY="553.0" prefHeight="40.0" prefWidth="200.0" promptText="Confirm Password">
+         <styleClass>
+            <String fx:value="PasswordField" />
+            <String fx:value="Text" />
+         </styleClass></PasswordField>
+      <TextField fx:id="nametxt" disable="true" layoutX="614.0" layoutY="467.0" onKeyPressed="#usePressed" prefHeight="40.0" prefWidth="200.0" promptText="Username">
+         <styleClass>
+            <String fx:value="TextField" />
+            <String fx:value="Text" />
+         </styleClass></TextField>
+      <JFXButton fx:id="registerbtn" buttonType="RAISED" disable="true" layoutX="662.0" layoutY="630.0" onAction="#registerPressed" styleClass="bbb" text="Register" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="20.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="signInbtn" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="77.0" layoutY="60.0" onAction="#signPressed" prefHeight="79.0" prefWidth="54.0" style="-fx-background-radius: 60 60 60 60;">
+         <graphic>
+            <ImageView fitHeight="108.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/backbtn.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <Label fx:id="emplbl" layoutX="492.0" layoutY="348.0" styleClass="Label" text="Employee Id" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="746.0" layoutY="349.0" styleClass="Label" text="Position" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="namelbl" disable="true" layoutX="614.0" layoutY="447.0" styleClass="Label" text="Username" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="paslbl" disable="true" layoutX="487.0" layoutY="532.0" styleClass="Label" text="Password" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="conpaslbl" disable="true" layoutX="720.0" layoutY="532.0" styleClass="Label" text="Confirm Password" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="binbtn" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="877.0" layoutY="622.0" onAction="#binPressed" prefHeight="53.0" prefWidth="59.0" style="-fx-background-radius: 40; -fx-border-radius: 50;" styleClass="bt">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/bin.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label fx:id="warninglbl" layoutX="484.0" layoutY="599.0" styleClass="Label" textFill="RED" visible="false" />
+      <ImageView fx:id="personImage" fitHeight="150.0" fitWidth="200.0" layoutX="639.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/image/manager.png" />
+         </image>
+         <effect>
+            <Glow />
+         </effect>
+      </ImageView>
+   </children>
+</AnchorPane>

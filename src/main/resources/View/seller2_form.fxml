@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="540.0" prefWidth="637.0" styleClass="BackgroundPane2" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.Seller2FormController">
+
+    <children>
+        <Text fill="WHITE" layoutX="247.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Label" text="Seller Info">
+            <font>
+                <Font size="36.0" />
+            </font></Text>
+        <Separator layoutX="125.0" layoutY="110.0" prefHeight="12.0" prefWidth="388.0" />
+        <TextField fx:id="supidtxt" layoutX="53.0" layoutY="199.0" onKeyTyped="#supTyPed" promptText="Seller id" styleClass="TextField" />
+        <TextField fx:id="supaddtxt" layoutX="54.0" layoutY="305.0" promptText="Address" styleClass="TextField" />
+        <TextField fx:id="supnametxt" layoutX="355.0" layoutY="199.0" promptText="Name" styleClass="TextField" />
+        <TextField fx:id="supTimetxt" layoutX="354.0" layoutY="306.0" onKeyTyped="#timeTyped" promptText="Time Period" styleClass="TextField" />
+        <JFXButton fx:id="saveBtn" buttonType="RAISED" layoutX="480.0" layoutY="435.0" onAction="#savePressed" prefHeight="39.0" prefWidth="101.0" styleClass="bt" text="Save" textAlignment="CENTER" textFill="WHITE" />
+        <JFXButton fx:id="clearBtn" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="363.0" layoutY="438.0" onAction="#clearPressed" styleClass="bt" text="Save" textAlignment="CENTER">
+            <graphic>
+                <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assests/image/icons8-remove-90.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+        <DatePicker fx:id="supdatetxt" layoutX="55.0" layoutY="435.0" prefHeight="39.0" prefWidth="224.0" styleClass="TextField" />
+        <Label layoutX="53.0" layoutY="172.0" styleClass="Label" text="Seller Id" textFill="WHITE" />
+        <Label layoutX="354.0" layoutY="172.0" styleClass="Label" text="Name" textFill="WHITE" />
+        <Label layoutX="54.0" layoutY="278.0" styleClass="Label" text="Address" textFill="WHITE" />
+        <Label layoutX="354.0" layoutY="279.0" styleClass="Label" text="Period" textFill="WHITE" />
+        <Label layoutX="54.0" layoutY="408.0" styleClass="Label" text="Joined Date" textFill="WHITE" />
+      <Label layoutX="52.0" layoutY="130.0" styleClass="Label" text="Next Seller Id:" textFill="WHITE" />
+      <Label fx:id="buyidlbl" layoutX="160.0" layoutY="130.0" prefHeight="21.0" styleClass="Label" textFill="WHITE" />
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="436.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/image/delivery-courier.png" />
+         </image>
+         <effect>
+            <Glow level="0.4" />
+         </effect>
+      </ImageView>
+    </children>
+    <stylesheets>
+        <URL value="@../assests/StyleSheets/login.css" />
+        <URL value="@../assests/StyleSheets/Dispaly.css" />
+    </stylesheets>
+
+</AnchorPane>

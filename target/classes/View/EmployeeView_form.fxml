@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="empPane" prefHeight="650.0" prefWidth="1286.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.EmployeeViewFormController">
+   <children>
+      <ImageView fitHeight="129.0" fitWidth="1252.0" layoutX="26.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/image/tp.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="empTable" layoutX="16.0" layoutY="238.0" prefHeight="389.0" prefWidth="1262.0">
+        <columns>
+          <TableColumn fx:id="colId" editable="false" prefWidth="130.0" text="Employee Id" />
+          <TableColumn fx:id="colFname" editable="false" prefWidth="131.0" text="First Name" />
+            <TableColumn fx:id="colLname" editable="false" minWidth="0.0" prefWidth="138.0" text="Last Name" />
+            <TableColumn fx:id="coladdress" editable="false" prefWidth="131.0" text="Address" />
+            <TableColumn fx:id="colCon" editable="false" prefWidth="144.0" text="Contact No" />
+            <TableColumn fx:id="colDob" prefWidth="132.0" text="Date of Birth" />
+            <TableColumn fx:id="colJdate" editable="false" prefWidth="147.0" text="Joined Date" />
+            <TableColumn fx:id="colPos" editable="false" prefWidth="146.0" text="Position" />
+            <TableColumn fx:id="colEdit" prefWidth="83.0" style="-fx-alignment: center;" text="Edit" />
+            <TableColumn fx:id="colDelete" prefWidth="79.0" style="-fx-alignment: center;" text="Delete" />
+        </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="470.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Manage">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Text>
+      <Separator layoutX="59.0" layoutY="159.0" prefHeight="0.0" prefWidth="1172.0" style="-fx-background-color: white;">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Separator>
+      <JFXButton fx:id="reloadbtn" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="23.0" layoutY="180.0" onAction="#reloadPressed" styleClass="a" stylesheets="@../assests/StyleSheets/login.css" text="Reload" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/icons8-reload-60.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="addBtn" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="98.0" layoutY="180.0" onAction="#addPressed" styleClass="bt" stylesheets="@../assests/StyleSheets/login.css">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/icons8-add-administrator-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView fitHeight="109.0" fitWidth="108.0" layoutX="1073.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/image/division.png" />
+         </image>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="1133.0" layoutY="175.0" onAction="#empOnAction" styleClass="b" stylesheets="@../assests/StyleSheets/login.css" text="Report" textFill="#f2f2f2">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/image/report.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
